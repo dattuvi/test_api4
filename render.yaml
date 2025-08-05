@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: fastapi-openrouter-chatbot
+    env: python
+    buildCommand: ""
+    startCommand: ./start.sh
+    plan: free
+    envVars:
+      - key: OPENROUTER_API_KEY
+        sync: false
+      - key: PORT
+        value: 10000
